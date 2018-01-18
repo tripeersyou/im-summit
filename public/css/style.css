@@ -1,0 +1,12 @@
+h1 {
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+
+#form {
+    padding-top: 1em;
+}
+
+.input-field{
+    margin: 0;
+}

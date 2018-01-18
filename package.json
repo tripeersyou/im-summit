@@ -1,0 +1,21 @@
+{
+  "name": "im-summit",
+  "version": "1.0.0",
+  "description": "Information and registration website for IM Summit of Ateneo MISA",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Francis Avancena",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "materialize-css": "^0.100.2",
+    "mongojs": "^2.4.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
+}
