@@ -26,7 +26,7 @@ $(document).ready(function () {
         if (validateForm() || true) {
             // Send Email
             $.ajax({
-                url: `http://formspree.io/${imSummitEmail}`,
+                url: `https://formspree.io/${imSummitEmail}`,
                 method: 'post',
                 data: $('#form').serialize(),
                 dataType: 'json',
