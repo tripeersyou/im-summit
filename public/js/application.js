@@ -1,4 +1,15 @@
 $(document).ready(function () {
+
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+        duration: 200
+    });
+
+    setInterval(() => {
+        $('.carousel.carousel-slider').carousel('next');
+    }, 3000);
+
     let imSummitEmail;
 
     const team_leader = $('#team_leader');
@@ -8,7 +19,6 @@ $(document).ready(function () {
     const year_course = $('#year_course');
     const university = $('#university');
     const terms = $('#terms');
-    const submit = $('#submit');
 
     $.ajax({
         url: '/api/email',
