@@ -1,5 +1,4 @@
 # IM Summit Website
 
 Currently deployed in Heroku:
-
-http://im-summit.herokuapp.com/
+https://im-summit.herokuapp.com/
