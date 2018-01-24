@@ -7,78 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>IM Summit 2018 | Ateneo MISA</title>
+    <title>IM Summit: ENDPOINT</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col m6 s12" id="content">
-                <div class="carousel carousel-slider">
-                    <a class="carousel-item" href="#one!">
-                        <img style="height: 97vh;" src="https://lorempixel.com/800/400/food/1">
-                    </a>
-                    <a class="carousel-item" href="#two!">
-                        <img style="height: 97vh;" src="https://lorempixel.com/800/400/food/2">
-                    </a>
-                    <a class="carousel-item" href="#three!">
-                        <img style="height: 97vh;" src="https://lorempixel.com/800/400/food/3">
-                    </a>
-                    <a class="carousel-item" href="#four!">
-                        <img style="height: 97vh;" src="https://lorempixel.com/800/400/food/4">
-                    </a>
-                </div>
-            </div>
-            <div class="col m6 s12" id="text">
-                <div class="container">
-                    <h1>Register</h1>
-                    <p>Open to
-                        <b>all college students</b>
-                        <br>
-                        <span class="blue-text">JOIN NOW</span>, it takes less than a minute.</p>
-                    <form action="/" method="post" id="form">
-                        <div class="input-field">
-                            <input type="text" name="Team Leader" id="team_leader">
-                            <label for="team_leader">Team Leader:</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="text" name="Team Name" id="team_name">
-                            <label for="team_name">Team Name:</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="text" name="Phone Number" id="phone" maxlength="11">
-                            <label for="phone">Phone Number:</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="email" name="Email Address" id="email">
-                            <label for="email">Email Address:</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="text" name="Year &amp; Course" id="year_course">
-                            <label for="year_course">Year &amp; Course:</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="text" name="University" id="university">
-                            <label for="university">University:</label>
-                        </div>
-                        <p>
-                            <input type="checkbox" name="Terms and Conditions" id="terms">
-                            <label for="terms">I accept the terms and conditions and privacy policy.</label>
-                        </p>
-                        <div class="input-field"></div>
-                        <div class="row">
-                            <div class="col m3 offset-m9">
-                                <input type="button" value="Submit" class="btn red" id="submit">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="container">
+        <div class="row" id='landing'>
+            <% include landing %>
+        </div>
+        <div class="row" id="about">
+            <% include about %>
+        </div>
+        <div class="row" id="dates">
+            <% include date %>
+        </div>
+        <div class="row" id="reg">
+            <% include form %>
+        </div>
+        <div class="row" id="footer">
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="/js/application.js"></script>
 </body>
-
 </html>

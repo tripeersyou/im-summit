@@ -1,5 +1,20 @@
 $(document).ready(function () {
 
+    $('#form').hide();
+
+    $('#showForm').click(() => {
+        $('#reg-before').hide();
+        $('#form').fadeIn();
+    });
+
+    const team_leader = $('#team_leader');
+    const team_name = $('#team_name');
+    const phone = $('#phone');
+    const email = $('#email');
+    const year_course = $('#year_course');
+    const university = $('#university');
+    const terms = $('#terms');
+
     $('.carousel.carousel-slider').carousel({
         fullWidth: true,
         indicators: true,
@@ -11,14 +26,6 @@ $(document).ready(function () {
     }, 3000);
 
     let imSummitEmail;
-
-    const team_leader = $('#team_leader');
-    const team_name = $('#team_name');
-    const phone = $('#phone');
-    const email = $('#email');
-    const year_course = $('#year_course');
-    const university = $('#university');
-    const terms = $('#terms');
 
     $.ajax({
         url: '/api/email',
@@ -60,11 +67,20 @@ $(document).ready(function () {
     });
 
     function validateForm() {
+        let email_pattern = /\S+@(?:\w+\.)?\w+\.(?:com|edu)/
+        let email_validation = email.value.match(pattern)
+        let team_leader_validation
+        return team_leader.value != /\S/ && team_name.value != /\S/ && phone.value != /\S/ && email_validation != null && year_course.value != /\S/ && university != /\S/ && terms.checked;
 
     }
 
     function clearForm() {
-
+        team_leader.value = '';
+        team_name.value = '';
+        phone.value = '';
+        email.value = '';
+        year_course.value = '';
+        university.value = '';
+        terms.attr('checked',false);
     }
-
 });
