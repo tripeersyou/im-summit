@@ -1,31 +1,16 @@
 $(document).ready(function () {
 
+    let imSummitEmail;
+
+    $('.modal').modal();
+
     $('#form').hide();
 
     $('#showForm').click(() => {
         $('#reg-before').hide();
         $('#form').fadeIn();
+        clearForm();
     });
-
-    const team_leader = $('#team_leader');
-    const team_name = $('#team_name');
-    const phone = $('#phone');
-    const email = $('#email');
-    const year_course = $('#year_course');
-    const university = $('#university');
-    const terms = $('#terms');
-
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true,
-        indicators: true,
-        duration: 200
-    });
-
-    setInterval(() => {
-        $('.carousel.carousel-slider').carousel('next');
-    }, 3000);
-
-    let imSummitEmail;
 
     $.ajax({
         url: '/api/email',
@@ -40,7 +25,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         // Validate Form
-        if (validateForm() || true) {
+        if (validateForm()) {
             // Send Email
             $.ajax({
                 url: `https://formspree.io/${imSummitEmail}`,
@@ -59,28 +44,38 @@ $(document).ready(function () {
                 data: $('#form').serialize(),
                 success: function () {
                     clearForm();
+                    $('#form').fadeOut();
+                    $('#reg-before').fadeIn();
+                    $('#success_modal').modal('open');
                 }
             });
         } else {
-
+            $('#error_modal').modal('open');
         }
     });
 
     function validateForm() {
-        let email_pattern = /\S+@(?:\w+\.)?\w+\.(?:com|edu)/
-        let email_validation = email.value.match(pattern)
-        let team_leader_validation
-        return team_leader.value != /\S/ && team_name.value != /\S/ && phone.value != /\S/ && email_validation != null && year_course.value != /\S/ && university != /\S/ && terms.checked;
+        let email_pattern = /\S+@(?:\w+\.)?\w+\.\w+/;
+        let phone_pattern = /([0-9]{11})/;
+        let noWhitespace = /\S/;
+        let team_leader_validation = $('#team_leader').val().match(noWhitespace);
+        let team_name_validation = $('#team_name').val().match(noWhitespace);
+        let phone_validation = $('#phone').val().match(phone_pattern);
+        let email_validation = $('#email').val().match(email_pattern);
+        let year_course_validation = $('#year_course').val().match(noWhitespace);
+        let university_validation = $('#university').val().match(noWhitespace);
 
+        return email_validation != null && team_leader_validation != null && team_name_validation != null && year_course_validation != null && university_validation != null && phone_validation != null && $('#terms').prop('checked');
     }
 
     function clearForm() {
-        team_leader.value = '';
-        team_name.value = '';
-        phone.value = '';
-        email.value = '';
-        year_course.value = '';
-        university.value = '';
-        terms.attr('checked',false);
+        $('#team_leader').val('');
+        $('#team_name').val('');
+        $('#phone').val('');
+        $('#email').val('');
+        $('#year_course').val('');
+        $('#university').val('');
+        $('#terms').val('');
+        $('input[type=checkbox]').prop('checked', false);
     }
 });

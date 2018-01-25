@@ -1,6 +1,26 @@
+@font-face {
+    font-family: IMSummit;
+    src: url('../font/Core-Circus.otf');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: IMSummit;
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     font-size: 3em;
     margin-top: 0.5em;
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #form {
@@ -14,4 +34,47 @@ h1 {
 
 .input-field {
     margin: 0;
+}
+
+#landing,
+#about,
+#dates,
+#reg {
+    height: 100vh;
+    /* border: 1px black solid; */
+}
+
+#landing>* {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#about>* {
+    position: relative;
+    top: 50%;
+    /* left: 50%; */
+    transform: translate(0%, -50%);
+}
+
+#dates>* {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#reg>#reg-before {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#reg>.container {
+    position: relative;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
 }

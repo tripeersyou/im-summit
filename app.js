@@ -32,7 +32,7 @@ app.post('/', (req, res) => {
 app.post('/api/email', (req, res) => {
     let json = {
         email: process.env.email
-    }
+    };
     res.json(json);
 });
 

@@ -4,35 +4,36 @@
     <button style="display:block;margin:auto;" id="showForm" class="btn">REGISTER</button>
 </div>
 
-
-<form action="/" method="post" id="form">
-    <div class="input-field">
-        <input type="text" name="Team Leader" id="team_leader">
-        <label for="team_leader">Team Leader:</label>
-    </div>
-    <div class="input-field">
-        <input type="text" name="Team Name" id="team_name">
-        <label for="team_name">Team Name:</label>
-    </div>
-    <div class="input-field">
-        <input type="text" name="Phone Number" id="phone" maxlength="11">
-        <label for="phone">Phone Number:</label>
-    </div>
-    <div class="input-field">
-        <input type="email" name="Email Address" id="email">
-        <label for="email">Email Address:</label>
-    </div>
-    <div class="input-field">
-        <input type="text" name="Year &amp; Course" id="year_course">
-        <label for="year_course">Year &amp; Course:</label>
-    </div>
-    <div class="input-field">
-        <input type="text" name="University" id="university">
-        <label for="university">University:</label>
-    </div>
-    <p>
-        <input type="checkbox" name="Terms and Conditions" id="terms">
-        <label for="terms">I accept the terms and conditions and privacy policy.</label>
-    </p>
-    <input type="button" value="Submit" class="btn primary" id="submit">
-</form>
+<div class="container">
+    <form action="/" method="post" id="form">
+        <div class="input-field">
+            <input type="text" name="Team Leader" id="team_leader">
+            <label for="team_leader">Team Leader:</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="Team Name" id="team_name">
+            <label for="team_name">Team Name:</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="Phone Number" id="phone" maxlength="11">
+            <label for="phone">Phone Number:</label>
+        </div>
+        <div class="input-field">
+            <input type="email" name="Email Address" id="email">
+            <label for="email">Email Address:</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="Year &amp; Course" id="year_course">
+            <label for="year_course">Year &amp; Course:</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="University" id="university">
+            <label for="university">University:</label>
+        </div>
+        <p>
+            <input type="checkbox" name="Terms and Conditions" id="terms">
+            <label for="terms">I accept the <a href="#terms_modal" class="modal-trigger">terms and conditions and privacy policy.</a></label>
+        </p>
+        <input type="button" value="Submit" class="btn primary" id="submit">
+    </form>
+</div>
