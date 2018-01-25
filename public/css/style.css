@@ -20,7 +20,7 @@ h1 {
 }
 
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 #form {
@@ -37,12 +37,16 @@ h1 {
 }
 
 #landing,
-#about,
+/* #about, */
 #dates,
 #reg {
     height: 100vh;
     /* border: 1px black solid; */
 }
+
+/* #about{
+    border: 1px black solid;
+} */
 
 #landing>* {
     position: relative;
@@ -53,12 +57,13 @@ h1 {
 
 #about>* {
     position: relative;
-    top: 50%;
-    /* left: 50%; */
-    transform: translate(0%, -50%);
+    /* top: 20%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#dates>* {
+#dates>div {
+    text-align: center;
     position: relative;
     top: 50%;
     left: 50%;

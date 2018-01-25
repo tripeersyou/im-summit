@@ -10,6 +10,7 @@ $(document).ready(function () {
         $('#reg-before').hide();
         $('#form').fadeIn();
         clearForm();
+        $('#team_leader').focus();
     });
 
     $.ajax({
@@ -17,6 +18,12 @@ $(document).ready(function () {
         method: 'post',
         success: function (response) {
             imSummitEmail = response.email;
+        }
+    });
+
+    $('input').keypress(function(event){
+        if (event.keyCode === 13) {
+            event.preventDefault();
         }
     });
 
@@ -56,7 +63,7 @@ $(document).ready(function () {
 
     function validateForm() {
         let email_pattern = /\S+@(?:\w+\.)?\w+\.\w+/;
-        let phone_pattern = /([0-9]{11})/;
+        let phone_pattern = /0+9+[0-9]{9}/;
         let noWhitespace = /\S/;
         let team_leader_validation = $('#team_leader').val().match(noWhitespace);
         let team_name_validation = $('#team_name').val().match(noWhitespace);
