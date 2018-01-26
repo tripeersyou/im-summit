@@ -71,10 +71,10 @@ h1 {
 }
 
 #reg > .container {
-  position: relative;
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -50%);
+  position: inherit;
+  /*top: 50%;*/
+  /*left: 35%;*/
+  /*transform: translate(-50%, -50%);*/
 }
 /* Mobile Queries */
 @media only screen and (max-width: 768px) {

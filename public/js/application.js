@@ -7,6 +7,7 @@ $(document).ready(function () {
     $('#form').hide();
 
     $('#showForm').click(() => {
+        $('#reg').css('height', 'auto');
         $('#reg-before').hide();
         $('#form').fadeIn();
         clearForm();
@@ -54,6 +55,7 @@ $(document).ready(function () {
                     $('#form').fadeOut();
                     $('#reg-before').fadeIn();
                     $('#success_modal').modal('open');
+                    $('#reg').css('height', '100vh');
                 }
             });
         } else {
