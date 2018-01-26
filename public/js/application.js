@@ -21,7 +21,7 @@ $(document).ready(function () {
         }
     });
 
-    $('input').keypress(function(event){
+    $('input').keypress(function (event) {
         if (event.keyCode === 13) {
             event.preventDefault();
         }
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
     function validateForm() {
         let email_pattern = /\S+@(?:\w+\.)?\w+\.\w+/;
-        let phone_pattern = /0+9+[0-9]{9}/;
+        let phone_pattern = /09[0-9]{9}/;
         let noWhitespace = /\S/;
         let team_leader_validation = $('#team_leader').val().match(noWhitespace);
         let team_name_validation = $('#team_name').val().match(noWhitespace);

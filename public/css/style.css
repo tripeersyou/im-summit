@@ -36,17 +36,10 @@ h1 {
     margin: 0;
 }
 
-#landing,
-/* #about, */
-#dates,
-#reg {
-    height: 100vh;
-    /* border: 1px black solid; */
+#about, #reg, #dates, #landing {
+  height: 100vh;
+  /*border: 1px black solid;*/
 }
-
-/* #about{
-    border: 1px black solid;
-} */
 
 #landing>* {
     position: relative;
@@ -55,31 +48,59 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-#about>* {
-    position: relative;
-    /* top: 20%; */
-    left: 50%;
-    transform: translate(-50%, -50%);
+#about > * {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #dates>div {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#reg > #reg-before {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#reg > .container {
+  position: relative;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+/* Mobile Queries */
+@media only screen and (max-width: 768px) {
+  #about, #dates {
+    height: auto;
+  }
+
+  #dates>div {
+    position: inherit;
     text-align: center;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    top: 0%;
+    left: 0%;
+    transform: translate(0%,0%);
+  }
 
-#reg>#reg-before {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+  #reg > #reg-before {
+    /*position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);*/
+  }
 
-#reg>.container {
-    position: relative;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
+  #reg > .container {
+    position: inherit;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
 }

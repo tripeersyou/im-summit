@@ -16,10 +16,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('*', (req, res) => {
+    console.log('A user connected to your page.');
     res.render('index');
 });
 
 app.post('/', (req, res) => {
+    console.log('A user registered');
     let registration = req.body;
     db.registrations.insert(registration, (err, result) => {
         if (err) {
