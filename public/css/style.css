@@ -1,6 +1,11 @@
 @font-face {
-    font-family: IMSummit;
-    src: url('../font/Core-Circus.otf');
+  font-family: IMSummit;
+  src: url('../font/Core-Circus.otf');
+}
+
+@font-face {
+  font-family: Details;
+  src: url('../font/GOTHAM-MEDIUM.otf');
 }
 
 h1,
@@ -9,34 +14,38 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: IMSummit;
-    margin: 0;
-    padding: 0;
+  font-family: IMSummit;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    font-size: 3em;
-    margin-top: 0.5em;
+  font-size: 3em;
+  margin-top: 0.5em;
 }
 
 * {
-    font-family: 'Century', serif;
+  font-family: Details;
+  font-size: 1em;
 }
 
 #form {
-    padding-top: 1em;
+  padding-top: 1em;
 }
 
 #content,
 #text {
-    padding: 0;
+  padding: 0;
 }
 
 .input-field {
-    margin: 0;
+  margin: 0;
 }
 
-#about, #reg, #dates, #landing {
+#about,
+#reg,
+#dates,
+#landing {
   height: 100vh;
   margin: 0;
   /*border: 1px black solid;*/
@@ -50,18 +59,18 @@ h1 {
 }
 
 #landing>* {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#about > * {
-  /* padding-top: 3em; */
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#about>* {
+  /* padding-top: 3em; */
+  position: relative;
+  /* top: 30%; */
+  /* left: 35%; */
+  /* transform: translate(-50%, -50%); */
 }
 
 #about_dates {
@@ -72,24 +81,23 @@ h1 {
   background-size: cover;
 }
 
-
 #dates>div {
   position: relative;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* top: 30%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
 }
 
-#reg > #reg-before {
+#reg>#reg-before {
   position: relative;
-  top: 50%;
+  top: 34%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#dates_reg {
-  height: 30vw;
+#dates_prizes {
+  height: 32vw;
   background-image: url('../img/reg.png');
   background-attachment: none;
   background-repeat: no-repeat;
@@ -97,7 +105,15 @@ h1 {
   /* margin-left: 3em; */
 }
 
-#reg > .container {
+#prizes_reg {
+  height: 30vw;
+  background-image: url('../img/dates.png');
+  background-attachment: unset;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#reg>.container {
   padding-bottom: 2em;
   position: inherit;
   /*top: 50%;*/
@@ -110,30 +126,34 @@ h1 {
   background-image: url('../img/footer.png');
   background-attachment: unset;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
+
+.collapsible-body {
+  background: white;
+}
+
 /* Mobile Queries */
+
 @media only screen and (max-width: 768px) {
-  #about, #dates {
+  #about,
+  #dates {
     height: auto;
   }
-
   #dates>div {
     position: inherit;
     text-align: center;
     top: 0%;
     left: 0%;
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
   }
-
-  #reg > #reg-before {
+  #reg>#reg-before {
     /*position: relative;
     top: 0%;
     left: 0%;
     transform: translate(0%, 0%);*/
   }
-
-  #reg > .container {
+  #reg>.container {
     position: inherit;
     top: 0%;
     left: 0%;
