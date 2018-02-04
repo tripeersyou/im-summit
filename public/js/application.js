@@ -11,7 +11,7 @@ $(document).ready(function () {
         $('#reg-before').hide();
         $('#form').fadeIn();
         clearForm();
-        $('#team_leader').focus();
+        $('#team_name').focus();
     });
 
     $.ajax({
@@ -34,11 +34,12 @@ $(document).ready(function () {
 
         // Validate Form
         if (validateForm()) {
-            // Send Email
+            let registration = $('#form').serialize();
+            console.log(registration);
             $.ajax({
                 url: `https://formspree.io/${imSummitEmail}`,
                 method: 'post',
-                data: $('#form').serialize(),
+                data: registration,
                 dataType: 'json',
                 sucess: function (response) {
                     console.log(response);

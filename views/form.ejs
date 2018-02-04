@@ -6,33 +6,89 @@
 
 <div class="container">
     <form action="/" method="post" id="form">
-        <div class="input-field">
-            <input type="text" name="Team Leader" id="team_leader">
-            <label for="team_leader">Team Leader:</label>
-        </div>
+        <h5 style='padding-bottom: 1em;'>Register for IM Summit: Endpoint</h5>
         <div class="input-field">
             <input type="text" name="Team Name" id="team_name">
             <label for="team_name">Team Name:</label>
         </div>
-        <div class="input-field">
-            <input type="text" name="Phone Number" id="phone" maxlength="11">
-            <label for="phone">Phone Number:</label>
+        <div class="row">
+            <div class="col s6">
+                <div class="input-field">
+                    <input type="text" name="Team Leader" id="team_leader">
+                    <label for="team_leader">Team Leader:</label>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="input-field">
+                    <input type="text" name="Leader: Year &amp; Course" id="year_course">
+                    <label for="year_course">Year &amp; Course:</label>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="input-field">
+                    <input type="text" name="Phone Number" id="phone" maxlength="11">
+                    <label for="phone">Phone Number:</label>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="input-field">
+                    <input type="email" name="Email Address" id="email">
+                    <label for="email">Email Address:</label>
+                </div>
+            </div>
         </div>
-        <div class="input-field">
-            <input type="email" name="Email Address" id="email">
-            <label for="email">Email Address:</label>
-        </div>
-        <div class="input-field">
-            <input type="text" name="Year &amp; Course" id="year_course">
-            <label for="year_course">Year &amp; Course:</label>
+        <h6 style='padding-bottom: 1em;'>Members:</h6>
+        <div class="row">
+            <div class="col s12">
+                <div class="input-field col s6">
+                    <input type="text" name="Member[]" class="member_name">
+                    <label for="team_leader">Team Memeber:</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="text" name="Year &amp; Course[]" class="year_course">
+                    <label for="year_course">Year &amp; Course:</label>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="input-field col s6">
+                    <input type="text" name="Member[]" class="member_name">
+                    <label for="team_leader">Team Memeber:</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="text" name="Year &amp; Course[]" class="year_course">
+                    <label for="year_course">Year &amp; Course:</label>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="input-field col s6">
+                    <input type="text" name="Member[]" class="member_name">
+                    <label for="team_leader">Team Memeber:</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="text" name="Year &amp; Course[]" class="year_course">
+                    <label for="year_course">Year &amp; Course:</label>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="input-field col s6">
+                    <input type="text" name="Member[]" class="member_name">
+                    <label for="team_leader">Team Memeber:</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="text" name="Year &amp; Course[]" class="year_course">
+                    <label for="year_course">Year &amp; Course:</label>
+                </div>
+            </div>
         </div>
         <div class="input-field">
             <input type="text" name="University" id="university">
             <label for="university">University:</label>
         </div>
         <p>
-            <input type="checkbox" name="Terms and Conditions" id="terms">
-            <label for="terms">I accept the <a href="#terms_modal" class="modal-trigger">terms and conditions and privacy policy.</a></label>
+            <input type="checkbox" name="Terms and Conditions" id="terms" value="on">
+            <label for="terms">I accept the
+                <a href="#terms_modal" class="modal-trigger">terms and conditions and privacy policy.</a>
+            </label>
         </p>
         <input type="button" value="Submit" class="btn primary" id="submit">
     </form>

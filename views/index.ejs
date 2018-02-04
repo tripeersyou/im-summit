@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>IM Summit: Endpoint</title>
@@ -17,27 +17,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row" id='landing'>
-            <% include landing %>
-        </div>
-        <div class="row" id="about">
-            <% include about %>
-        </div>
-        <div class="row" id="dates">
-            <% include date %>
-        </div>
-        <div class="row" id="reg">
-            <% include form %>
-        </div>
-        <div class="row" id="footer">
-            <% include contact %>
-        </div>
-        <% include terms %>
+    <div class="row" id='landing'>
+        <% include landing %>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="/js/application.js"></script>
+    <div class="row" id="about">
+        <% include about %>    
+    </div>
+    <div id="about_dates"></div>
+    <div class="row" id="dates">
+        <% include date %>
+    </div>
+    <div id="dates_reg"></div>
+    <div class="row" id="reg">
+        <% include form %>
+    </div>
+    <div class="row" id="footer">
+        <% include contact %>
+    </div>
+    <% include terms %>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="/js/application.js"></script>
 </body>
 
 </html>
