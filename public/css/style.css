@@ -132,8 +132,13 @@ h1 {
   background: white;
 }
 
-/* Mobile Queries */
+#fab {
+  position: fixed;
+  left:85%;
+  top: 85%;
+}
 
+/* Mobile Queries */
 @media only screen and (max-width: 768px) {
   #about,
   #dates {

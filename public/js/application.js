@@ -6,6 +6,8 @@ $(document).ready(function () {
 
     $('#form').hide();
 
+    $('#fab').tooltip({delay: 50});
+
     $('#showForm').click(() => {
         $('#reg').css('height', 'auto');
         $('#reg-before').hide();
