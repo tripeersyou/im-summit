@@ -51,6 +51,7 @@ $(document).ready(function () {
                 url: '/',
                 method: 'post',
                 data: $('#form').serialize(),
+                dataType: 'json',
                 success: function () {
                     clearForm();
                     $('#form').fadeOut();
