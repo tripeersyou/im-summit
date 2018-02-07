@@ -33,7 +33,7 @@ $(document).ready(function () {
     $('#submit').click(function (event) {
 
         event.preventDefault();
-
+        $('#status').html('Processing your registration.');
         // Validate Form
         if (validateForm()) {
             let registration = $('#form').serialize();
@@ -60,10 +60,12 @@ $(document).ready(function () {
                     $('#reg-before').fadeIn();
                     $('#success_modal').modal('open');
                     $('#reg').css('height', '100vh');
+                    $('#status').html('');
                 }
             });
         } else {
             $('#error_modal').modal('open');
+            $('#status').html('');
         }
     });
 
