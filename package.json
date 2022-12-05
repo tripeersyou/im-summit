@@ -9,10 +9,10 @@
   "author": "Francis Avancena",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.19.2",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "mongojs": "^2.4.1"
   }
 }
